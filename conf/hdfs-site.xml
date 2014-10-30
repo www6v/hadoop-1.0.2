@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+     
+
+    <property>
+        <name>dfs.name.dir</name>
+        <value>/home/hadoop/hadoopData/name</value>                <!-- namenode持久存储路径 -->
+    </property>
+    <property>
+        <name>dfs.data.dir</name>
+        <value>/home/hadoop/hadoopData/data</value>                <!-- datanode持久存储路径 -->
+    </property>
+    <property>
+        <name>fs.replication</name>                                <!-- 数据备份的个数，默认是3 -->
+        <value>2</value>
+    </property>
+    <property>
+        <name>dfs.permissions</name>                               <!-- 是否需要角色权限验证，上传文件时会用到 -->
+        <value>false</value>
+    </property>
+    <property>
+        <name>dfs.support.append</name>                            <!-- 否允许文件APPEND, 尽量不要append -->
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.block.size</name>                                <!-- 文件块大小, 默认64MB -->
+        <value>134217728</value>
+    </property>
+
+
+
+</configuration>

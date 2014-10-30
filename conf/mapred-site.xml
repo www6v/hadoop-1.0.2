@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+     
+
+    <property>
+        <name>mapred.job.tracker</name>                            <!-- jobtracker的位置 -->
+        <value>10.15.43.7:9001</value>
+    </property>
+    <property>
+        <name>io.sort.factor</name>                                <!-- 同时归并的流的数量 -->
+        <value>10</value>
+    </property>
+    <property>
+        <name>io.sort.mb</name>                                    <!-- 排序时内存空间大小 -->
+        <value>100</value>
+    </property>
+    <property>
+        <name>mapred.reduce.parallel.copies</name>
+        <value>5</value>                                           <!-- 最多同时下载5个map的数据 -->
+    </property>
+    <property>
+        <name>mapred.job.reuse.jvm.num.tasks</name>                <!-- JVM重用机制 -->
+        <value>-1</value>
+    </property>
+    <property>
+        <name>mapred.child.java.opts</name>                        <!-- map任务启动内存 -->
+        <value>-Xmx3096m</value>
+    </property>
+    <property>
+      <name>mapred.tasktracker.map.tasks.maximum</name>     <!-- 一个tasktracker至多同时运行的map任务数, 与CPU核数有关 -->
+      <value>4</value>
+    </property>
+    <property>
+      <name>mapred.tasktracker.reduce.tasks.maximum</name>  <!-- 一个tasktracker至多同时运行的reduce任务数, 与CPU核数有关 -->
+      <value>3</value>
+    </property>
+    <property>
+        <name>mapred.compress.map.output</name>                    <!-- map中间结果是否使用压缩 -->
+        <value>false</value>
+    </property>
+
+
+
+
+
+
+</configuration>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+ <property>
+    <name>hadoop.proxyuser.hadoop.hosts</name>
+    <value>10.15.43.1</value>
+ </property>
+ <property>
+    <name>hadoop.proxyuser.hadoop.groups</name>
+    <value>hadoop</value>
+ </property>   
+     <property>
+             <name>hadoop.tmp.dir</name>                               <!-- 存放nn的临时文件 -->
+             <value>/home/hadoop/hadoopData/tmp</value>    
+     </property>    
+     <property>        
+             <name>fs.default.name</name>                              <!-- 配置NN节点地址和端口号 -->
+             <value>hdfs://10.15.43.7:9000</value>    
+     </property>
+     <property>        
+             <name>io.file.buffer.size</name>                          <!-- 序列化文件处理时读写buffer的大小 -->             <value>4096</value>    
+     </property>    
+     <property>        
+             <name>io.bytes.per.checksum</name>                        <!-- 每校验码所校验的字节数 -->
+             <value>512</value>    
+     </property>
+
+
+
+
+
+</configuration>
